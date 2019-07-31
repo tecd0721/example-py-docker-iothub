@@ -181,7 +181,7 @@ Push application and get environment
 
 #### publisher.py
 
-This file can help us publisher message to topic。 
+This file can help us publishW message to topic。 
 
 Edit the **publisher.py** `broker、port、username、password` you can find in env.json
 
@@ -192,10 +192,12 @@ Edit the **publisher.py** `broker、port、username、password` you can find in 
 
 open two terminal
     
+    Listen the console
+    
     #cf logs {application name}
     cf logs python-demo-try
 
-.
+    send message to application in WISE-PaaS
 
     python publisher.py
 
