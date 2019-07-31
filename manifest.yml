@@ -9,6 +9,6 @@ applications:
   #help use compile the file when you push to cloud
   #buildpack: python_buildpack
   #let the backend application begin。
-  command: python3 -u index.py
+  command: python -u index.py
 services:
 - rabbitmq
