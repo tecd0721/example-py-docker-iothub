@@ -142,6 +142,8 @@ Check the service instance name same as WISE-PaaS
 
 
 
+## SSO(Single Sign On)
+
 This is the [sso](https://advantech.wistia.com/medias/vay5uug5q6) applicaition，open **`templates/index.html`** and editor the `ssoUrl` to your application name，
 
 If you don't want it，you can ignore it。
