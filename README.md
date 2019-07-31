@@ -72,7 +72,7 @@ RUN pip3 install -r requirements.txt
 #### index.py
 
 Simply backend appliaction。
-```
+```py
 app = Flask(__name__)
 
 # port from cloud environment variable or localhost:3000
@@ -89,7 +89,7 @@ def root():
 ```
 
 This is the mqtt connect config code，`vcap_services` can get the application environment in WISE-PaaS，you need to attention，and the service_name it need to be same name in WISE-PaaS rabbitmq(iothub) service name。
-```
+```py
 vcap_services = os.getenv('VCAP_SERVICES')
 vcap_services_js = json.loads(vcap_services)
 #need to be same name in WISE-PaaS
@@ -103,7 +103,7 @@ mqtt_port = vcap_services_js[service_name][0]['credentials']['protocols']['mqtt'
 ![Imgur](https://i.imgur.com/6777rmg.png)
 
 This code can connect to IohHub，if it connect successful `on_connect` will print successful result and subscribe topic `/hello`，you can define topic by yourself，and when we receive message `on_message` will print it。
-```
+```py
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
     client.subscribe("/hello")
