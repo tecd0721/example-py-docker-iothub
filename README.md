@@ -144,12 +144,35 @@ If you don't want it，you can ignore it。
     #change this **`python-demo-try`** to your **application name**
     var ssoUrl = myUrl.replace('python-demo-try', 'portal-sso');
 
+## Build Dokcer image
+
+Build image
+
+    docker build -t {image} .
+    docker build -t example-python-docker .
+
+
+Tag image to a docker hub  
+[Docker Hub](https://hub.docker.com/)
+
+![Imgur](https://i.imgur.com/SxiLcOH.png)
+
+    #docker login to the docker hub
+    docker login
+
+    #docker tag {image name} {your account/dockerhub-resp name}
+    docker tag example-py-docker WISE-PaaS/example-py-docker
+
+Push it to Docker Hub
+    
+    #docker push {your account/dockerhub-resp name}
+    docker push WISE-PaaS/example-py-docker
 
 Push application and get environment
 
 
-    #cf push {application name}
-    cf push python-demo-try
+    #cf push --docker-image{WISE-PaaS/DOCKERHUB-RESP name}
+    cf push --docker-image WISE-PaaS/eample-py-docker
     
     #get the application environment
     cf env python-demo-try > env.json 
