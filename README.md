@@ -102,6 +102,11 @@ mqtt_port = vcap_services_js[service_name][0]['credentials']['protocols']['mqtt'
 
 ![Imgur](https://i.imgur.com/6777rmg.png)
 
+
+**Notice:You can add service instance by yourself**
+
+![Imgur](https://i.imgur.com/ajqSsn1.png)
+
 This code can connect to IohHub，if it connect successful `on_connect` will print successful result and subscribe topic `/hello`，you can define topic by yourself，and when we receive message `on_message` will print it。
 ```py
 def on_connect(client, userdata, flags, rc):
