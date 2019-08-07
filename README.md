@@ -40,7 +40,7 @@ python3 package(those library can run this application in local):
 
 #### Download this file
 
-    git clone this respository
+    git clone https://github.com/WISE-PaaS/example-py-docker-iothub.git
 
 #### Login to WISE-PaaS 
     
